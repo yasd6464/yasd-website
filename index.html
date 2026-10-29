@@ -117,12 +117,21 @@ to{transform:translateY(25px) rotate(12deg)} }
  *,*::before,*::after { animation:none!important;scroll-behavior:auto!important;transition:none!important; }
  .reveal { opacity:1;transform:none; }
 }
-</style>
+</style>.brand-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: white;
+  padding: 4px;
+}
 </head>
 <body>
 <nav>
   <a class="brand" href="#">
-    <span class="logo">Y</span>
+    <img class="brand-logo"
+     src="images/converted.png"
+     alt="YASD Logo">
     <span>YASD<small style="display:block;font-size:10px;color:#786c8d">Youth Action for Sustainable Development</small></span>
   </a>
   <div class="links">
