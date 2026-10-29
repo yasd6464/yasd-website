@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#5425a8">
+<meta name="description" content="Youth Action for Sustainable Development — empowering youth, advancing gender equality and building a sustainable future.">
+<title>YASD | Youth Action for Sustainable Development</title>
+<style>
+:root {
+  --purple:#5926b5; --pink:#ff4f91;
+  --orange:#ffb547; --green:#b8f36b;
+  --ink:#21183c; --cream:#fffaf3;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0; font-family:Arial,sans-serif;
+  color:var(--ink); background:var(--cream);
+}
+button,a { -webkit-tap-highlight-color:transparent; }
+a { color:inherit; text-decoration:none; }
+nav {
+  display:flex; justify-content:space-between;
+  align-items:center; gap:14px; flex-wrap:wrap;
+  padding:18px 7%; background:white;
+}
+.brand { display:flex; align-items:center; gap:10px; font-weight:900; }
+.logo {
+  width:44px;height:44px;border-radius:14px;
+  background:var(--purple);color:white;
+  display:grid;place-items:center;font-size:19px;
+}
+.links { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+.links a { font-size:14px;font-weight:bold; }
+button {
+  border:0; cursor:pointer; border-radius:25px;
+  padding:12px 18px;font-weight:bold;font-size:14px;
+}
+.lang { background:var(--green); color:var(--ink); }
+.hero {
+  position:relative; overflow:hidden;
+  padding:90px 8% 85px;
+  background:linear-gradient(125deg,#5425a8,#8747d9 58%,#ff5798);
+  color:white; min-height:500px;
+}
+.hero:before,.hero:after {
+  content:""; position:absolute; border-radius:50%;
+  animation:float 7s ease-in-out infinite alternate;
+}
+.hero:before {
+  width:250px;height:250px;right:5%;top:7%;
+  background:#ffca68;opacity:.85;
+}
+.hero:after {
+  width:120px;height:120px;right:30%;bottom:8%;
+  background:#b8f36b;opacity:.9;animation-delay:-3s;
+}
+.hero-content { position:relative;z-index:1;max-width:720px; }
+.eyebrow {
+  display:inline-block;background:#ffffff22;
+  border:1px solid #ffffff55;padding:9px 15px;
+  border-radius:30px;font-size:13px;
+}
+h1 { font-size:clamp(40px,7vw,76px);line-height:1.06;
+  letter-spacing:-2px;margin:24px 0; }
+.hero p { max-width:590px;line-height:1.8;font-size:17px; }
+.actions { display:flex;gap:12px;flex-wrap:wrap;margin-top:28px; }
+.primary { background:var(--green);color:var(--ink); }
+.secondary { background:#ffffff20;color:white;border:1px solid #ffffff88; }
+section { padding:75px 8%; }
+.section-head { max-width:650px;margin-bottom:32px; }
+.kicker { color:var(--purple);font-weight:bold;text-transform:uppercase;letter-spacing:2px;font-size:12px; }
+h2 { font-size:clamp(30px,4vw,45px);margin:12px 0; }
+.intro { color:#655c73;line-height:1.8; }
+.cards { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px; }
+.card {
+  padding:26px;border-radius:24px;background:white;
+  border:1px solid #eee5f8;transition:transform .3s,box-shadow .3s;
+}
+.card:hover { transform:translateY(-8px);box-shadow:0 16px 35px #3d216516; }
+.card-icon { font-size:32px; }
+.card h3 { margin:18px 0 10px; }
+.card p { color:#655c73;line-height:1.7;font-size:14px; }
+.impact {
+  background:#f0e8ff;display:grid;
+  grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;
+}
+.impact strong { display:block;color:var(--purple);font-size:35px; }
+.impact span { display:block;margin-top:8px; }
+.join {
+  background:var(--green);border-radius:28px;
+  padding:38px;margin:0 8% 70px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;flex-wrap:wrap;
+}
+.join h2 { max-width:520px; }
+.join button { background:var(--purple);color:white; }
+footer { background:#21183c;color:white;padding:35px 8%;line-height:1.8; }
+footer p { color:#d9cfee;font-size:14px; }
+.reveal { opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s; }
+.reveal.visible { opacity:1;transform:translateY(0); }
+@keyframes float { from{transform:translateY(0) rotate(0)}
+to{transform:translateY(25px) rotate(12deg)} }
+@media(max-width:700px) {
+ nav { padding:15px 5%; }
+ .links { gap:12px; }
+ .hero { padding:65px 6%; }
+ .hero:before { right:-110px; }
+ section { padding:55px 6%; }
+ .cards { grid-template-columns:1fr; }
+ .impact { grid-template-columns:1fr; }
+ .join { margin:0 5% 50px;padding:26px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ *,*::before,*::after { animation:none!important;scroll-behavior:auto!important;transition:none!important; }
+ .reveal { opacity:1;transform:none; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="#">
+    <span class="logo">Y</span>
+    <span>YASD<small style="display:block;font-size:10px;color:#786c8d">Youth Action for Sustainable Development</small></span>
+  </a>
+  <div class="links">
+    <a href="#about" data-en="About" data-bn="পরিচিতি">About</a>
+    <a href="#programs" data-en="Programs" data-bn="কার্যক্রম">Programs</a>
+    <a href="#impact" data-en="Our Impact" data-bn="আমাদের প্রভাব">Our Impact</a>
+    <button class="lang" id="language">বাংলা</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <span class="eyebrow" data-en="Young Voices. Bold Actions." data-bn="তারুণ্যের কণ্ঠ, সাহসী পদক্ষেপ">Young Voices. Bold Actions.</span>
+    <h1 data-en="Together, We Can Change the World." data-bn="একসাথে গড়ি সমতাপূর্ণ ও সুন্দর পৃথিবী।">Together, We Can Change the World.</h1>
+    <p data-en="We are Youth Action for Sustainable Development (YASD), a youth-led organization working for gender equality, youth empowerment and a sustainable future."
+       data-bn="আমরা ইয়ুথ অ্যাকশন ফর সাসটেইনেবল ডেভেলপমেন্ট (YASD)। আমরা লিঙ্গসমতা, যুব ক্ষমতায়ন ও টেকসই ভবিষ্যৎ গড়তে কাজ করি।">We are Youth Action for Sustainable Development (YASD), a youth-led organization working for gender equality, youth empowerment and a sustainable future.</p>
+    <div class="actions">
+      <a class="primary" style="padding:14px 22px;border-radius:25px;font-weight:bold" href="#programs" data-en="Explore Our Work ↓" data-bn="আমাদের কার্যক্রম দেখুন ↓">Explore Our Work ↓</a>
+      <a class="secondary" style="padding:14px 22px;border-radius:25px;font-weight:bold" href="#join" data-en="Join Our Movement" data-bn="আমাদের সাথে যুক্ত হোন">Join Our Movement</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <div class="section-head">
+    <span class="kicker" data-en="Who We Are" data-bn="আমাদের পরিচয়">Who We Are</span>
+    <h2 data-en="Young people. Equal opportunities. Lasting change." data-bn="যুবশক্তি, সমান সুযোগ, স্থায়ী পরিবর্তন।">Young people. Equal opportunities. Lasting change.</h2>
+    <p class="intro" data-en="YASD works with young people and communities to advance dignity, equality, social justice and sustainable development."
+       data-bn="YASD তরুণ ও স্থানীয় জনগোষ্ঠীর সঙ্গে কাজ করে মর্যাদা, সমতা, সামাজিক ন্যায়বিচার ও টেকসই উন্নয়ন এগিয়ে নিতে।">YASD works with young people and communities to advance dignity, equality, social justice and sustainable development.</p>
+  </div>
+</section>
+
+<section id="programs" style="background:#fff3f8">
+  <div class="section-head reveal">
+    <span class="kicker" data-en="What We Do" data-bn="আমাদের কার্যক্রম">What We Do</span>
+    <h2 data-en="Action for a better tomorrow." data-bn="আগামীর জন্য আজই পদক্ষেপ।">Action for a better tomorrow.</h2>
+    <p class="intro" data-en="Discover the issues and initiatives that drive our work." data-bn="আমাদের কাজের গুরুত্বপূর্ণ ক্ষেত্র ও উদ্যোগগুলো জানুন।">Discover the issues and initiatives that drive our work.</p>
+  </div>
+  <div class="cards">
+    <article class="card reveal"><div class="card-icon">⚖️</div>
+      <h3 data-en="Gender Equality" data-bn="লিঙ্গসমতা">Gender Equality</h3>
+      <p data-en="Promoting equal rights, dignity, inclusion and prevention of gender-based violence."
+      data-bn="সমান অধিকার, মর্যাদা, অন্তর্ভুক্তি ও লিঙ্গভিত্তিক সহিংসতা প্রতিরোধে কাজ।">Promoting equal rights, dignity, inclusion and prevention of gender-based violence.</p>
+    </article>
+    <article class="card reveal"><div class="card-icon">✊</div>
+      <h3 data-en="Youth Empowerment" data-bn="যুব ক্ষমতায়ন">Youth Empowerment</h3>
+      <p data-en="Supporting young leaders through volunteering, skills, participation and advocacy."
+      data-bn="স্বেচ্ছাসেবা, দক্ষতা, অংশগ্রহণ ও অধিকার আদায়ের উদ্যোগে তরুণ নেতৃত্ব বিকাশ।">Supporting young leaders through volunteering, skills, participation and advocacy.</p>
+    </article>
+    <article class="card reveal"><div class="card-icon">🌱</div>
+      <h3 data-en="Climate & Environment" data-bn="জলবায়ু ও পরিবেশ">Climate & Environment</h3>
+      <p data-en="Encouraging climate awareness, environmental responsibility and sustainable communities."
+      data-bn="জলবায়ু সচেতনতা, পরিবেশের দায়িত্বশীলতা ও টেকসই জনগোষ্ঠী গঠনে উদ্যোগ।">Encouraging climate awareness, environmental responsibility and sustainable communities.</p>
+    </article>
+    <article class="card reveal"><div class="card-icon">💜</div>
+      <h3 data-en="Health & Wellbeing" data-bn="স্বাস্থ্য ও সুস্থতা">Health & Wellbeing</h3>
+      <p data-en="Building awareness around mental health, community health and sexual and reproductive health and rights."
+      data-bn="মানসিক স্বাস্থ্য, কমিউনিটি স্বাস্থ্য এবং যৌন ও প্রজননস্বাস্থ্য ও অধিকার বিষয়ে সচেতনতা।">Building awareness around mental health, community health and sexual and reproductive health and rights.</p>
+    </article>
+    <article class="card reveal"><div class="card-icon">🤝</div>
+      <h3 data-en="Community Action" data-bn="সামাজিক উদ্যোগ">Community Action</h3>
+      <p data-en="Connecting volunteers and communities to address local challenges together."
+      data-bn="স্থানীয় সমস্যা সমাধানে স্বেচ্ছাসেবক ও জনগোষ্ঠীকে একসাথে যুক্ত করা।">Connecting volunteers and communities to address local challenges together.</p>
+    </article>
+    <article class="card reveal"><div class="card-icon">📣</div>
+      <h3 data-en="Advocacy & Leadership" data-bn="অ্যাডভোকেসি ও নেতৃত্ব">Advocacy & Leadership</h3>
+      <p data-en="Creating spaces for youth voices, civic engagement and inclusive decision-making."
+      data-bn="যুব কণ্ঠস্বর, নাগরিক অংশগ্রহণ ও অন্তর্ভুক্তিমূলক সিদ্ধান্ত গ্রহণের সুযোগ তৈরি।">Creating spaces for youth voices, civic engagement and inclusive decision-making.</p>
+    </article>
+  </div>
+</section>
+
+<section id="impact" class="impact reveal">
+  <div><strong data-en="Youth-led" data-bn="যুব নেতৃত্ব">Youth-led</strong><span data-en="Our approach" data-bn="আমাদের কর্মপদ্ধতি">Our approach</span></div>
+  <div><strong data-en="Community-first" data-bn="জনগোষ্ঠী অগ্রাধিকার">Community-first</strong><span data-en="Our commitment" data-bn="আমাদের অঙ্গীকার">Our commitment</span></div>
+  <div><strong data-en="Equality for all" data-bn="সবার জন্য সমতা">Equality for all</strong><span data-en="Our vision" data-bn="আমাদের স্বপ্ন">Our vision</span></div>
+</section>
+
+<section id="join" class="join reveal">
+  <div>
+    <span class="kicker" data-en="Be Part of the Change" data-bn="পরিবর্তনের অংশ হোন">Be Part of the Change</span>
+    <h2 data-en="Your voice. Your action. Our future." data-bn="তোমার কণ্ঠ, তোমার পদক্ষেপ, আমাদের ভবিষ্যৎ।">Your voice. Your action. Our future.</h2>
+    <p data-en="Interested in volunteering or collaborating with YASD? Get in touch."
+       data-bn="YASD-এর সাথে স্বেচ্ছাসেবা বা যৌথ উদ্যোগে কাজ করতে আগ্রহী? যোগাযোগ করুন।">Interested in volunteering or collaborating with YASD? Get in touch.</p>
+  </div>
+  <a href="mailto:yasd.contact@gmail.com"><button data-en="Contact YASD ↗" data-bn="যোগাযোগ করুন ↗">Contact YASD ↗</button></a>
+</section>
+
+<footer>
+  <div class="brand"><span class="logo">Y</span><span>YASD</span></div>
+  <p data-en="Youth Action for Sustainable Development" data-bn="ইয়ুথ অ্যাকশন ফর সাসটেইনেবল ডেভেলপমেন্ট">Youth Action for Sustainable Development</p>
+  <p>© <span id="year"></span> YASD. <span data-en="Working for equality and sustainable development." data-bn="সমতা ও টেকসই উন্নয়নের লক্ষ্যে কাজ করছি।">Working for equality and sustainable development.</span></p>
+</footer>
+
+<script>
+const langButton = document.getElementById('language');
+let lang = 'en';
+langButton.addEventListener('click', () => {
+  lang = lang === 'en' ? 'bn' : 'en';
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-en]').forEach(el => {
+    el.textContent = el.dataset[lang];
+  });
+  langButton.textContent = lang === 'en' ? 'বাংলা' : 'English';
+});
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
